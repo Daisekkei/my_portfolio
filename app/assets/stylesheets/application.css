@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+header {
+  background-color: teal;
+  height: 20px;
+  width: 100%;
+  color: white ;
+  font-size: 20px;
+
+}
+
+
+
+#wrapper {
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  clear:both;
+}
+
+footer {
+  background-color: #4DADA1;
+  height:40px;
+  width: 100%;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  position: fixed;            /* ヘッダーの固定 */
+  bottom: 0px;                   /* 位置(上0px) */
+  left: 0px;                  /* 位置(右0px) */
+}
+
+.side {
+  width: 15%;
+  height: 100vh;
+}
+
+.main {
+  width: 85%;
+  height: 100vh;
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+}
+
+.window {
+  display: flex;
+   
+}
+
+
+.sales_person {
+  height: 150px;
+  width: 100%;
+  background-color: #83BAD6;
+}
+
+.customer_list {
+  height: 100%;
+  background-color: teal;
+  width: 100%;
+}
+
+
+
+.sales_forcast {
+  height: 150px;
+  width: 100%;
+  background-color:#E5E5E5;
+  font-size: 50px;
+  color: gray;
+  display: flex;
+}

@@ -1,0 +1,27 @@
+<body>
+  <div class = main>
+    <div class= sales_forcast>
+      <h1>
+        <%= image_tag 'rogo.png', class: 'logo'%>
+      </h1>
+      <h2>営業ノート</h2>
+      <div>
+      <%= link_to '新規投稿', '/posts/new'%>
+      <div>
+    </div>
+
+
+    <div class= project_list>
+      <% @posts.each do |post| %>
+        <div class="post">
+          <div class="post-date">
+            投稿日時：<%= post.created_at %>
+          </div>
+          <div class="post-content">
+            <%= post.content %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <div>
+</body>
