@@ -1,5 +1,15 @@
-<h1>新規投稿ページ</h1>
-<%= form_tag('/posts', method: :post) do %>
-  <input type="text" name="content">
-  <input type="submit" value="投稿する">
-<% end %>
+<body id="wrapper">
+
+  <div class = window>
+  <%= render partial:'side_newbox' %>
+  <%= render partial:'main_newbox' %>
+
+
+  </div>
+  <footer>
+    <small>&copy; 2020 Sales Note </small>
+  </footer>
+
+  
+
+</body>

@@ -21,24 +21,18 @@
         <p>US$19M/US$2.0M</p>
       </div>
 
-      <button type="button" class="btn_new" onclick="location.href='/posts/new'">新規作成</button>
-
     </div>
 
 
     <div class= project_list>
-      <% @posts.each do |post| %>
-        <div class="post">
-          <div class="post-date">
-            投稿日時：<%= post.created_at %>
-          </div>
-          <div class="post-content">
-            <%= post.content %>
-          </div>
-        </div>
-      <% end %>
 
-      
+  <h1>新規投稿ページ</h1>
+
+  <%= form_tag('/posts', method: :post) do %>
+    <input type="text" name="content">
+    <input type="submit" value="投稿する">
+  <% end %>
+
     </div>
   <div>
 </body>

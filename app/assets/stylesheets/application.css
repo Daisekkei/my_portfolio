@@ -42,7 +42,7 @@ footer {
   font-size: 10px;
   color: white;
   text-align: center;
-  padding-top: 20px;
+  padding: 10px;
   position: fixed;            /* ヘッダーの固定 */
   bottom: 0px;                   /* 位置(上0px) */
   left: 0px;                  /* 位置(右0px) */
@@ -73,21 +73,78 @@ footer {
   height: 150px;
   width: 100%;
   background-color: #83BAD6;
+  padding: 20px;
+  
+}
+
+.sales_name {
+  font-size: 30px;
+  color: azure;
 }
 
 .customer_list {
   height: 100%;
   background-color: teal;
   width: 100%;
+  padding: 20px;
+  color: azure;
+
 }
 
+.btn_new {
+  height: 40px;
+  width:120px;
+  background-color:teal;
+  color: whitesmoke;
+  cursor: hand;
+  font-size: 20px;
 
+  border-radius: 5px;
+  box-shadow: 0 10px 0 #007070;
+  position: absolute;
+  top: calc(50% - 30px);
+  right: 20px;
+
+}
+
+.btn_new:active {
+  box-shadow: 0 5px 0 #007070;
+  margin-top: 5px;
+}
 
 .sales_forcast {
   height: 150px;
   width: 100%;
   background-color:#E5E5E5;
-  font-size: 50px;
-  color: gray;
+  font-size: 70px;
+  color: green;
   display: flex;
+  vertical-align: middle;
+  position: relative;
+}
+
+.wf-racing {
+  font-family: 'Racing Sans One', cursive;
+  margin: 40px 40px 0px 0px;
+  font-size: 70px;
+}
+
+.sales-total {
+  color: green;
+  font-size: 20px;
+  font-weight: bold; 
+  margin: 40px;
+
+}
+
+.new-project {
+  font-style: italic;
+  color: greenyellow;
+  font-size: 20px;
+}
+
+.project_list {
+  height: calc(100% - 190px);
+  width: 100%;
+  padding: 20px;
 }
