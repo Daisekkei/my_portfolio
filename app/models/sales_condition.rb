@@ -1,0 +1,2 @@
+class SalesCondition < ApplicationRecord
+end

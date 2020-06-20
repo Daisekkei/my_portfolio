@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  part_number: MyString
+  Prot: 2020-06-20
+  MP: 2020-06-20
+  sell_price: 
+  buy_price: 
+  quantity_month: 1
+  MP_site: MyString
+  update: 2020-06-20 00:41:50
+
+two:
+  project_id: 
+  part_number: MyString
+  Prot: 2020-06-20
+  MP: 2020-06-20
+  sell_price: 
+  buy_price: 
+  quantity_month: 1
+  MP_site: MyString
+  update: 2020-06-20 00:41:50
