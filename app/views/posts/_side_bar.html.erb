@@ -10,13 +10,17 @@
       
     </div>
     
-    <div class=customer_list>
-      <div class = list_box>
-        <p class = customer_name>顧客名</p>
-        <p>株式会社A社</p>
-        <p>B株式会社</p>
+      <div class=customer_list>
+        <div class = list_box>
+          <p class = customer_name>顧客名</p>
+            <% @customers.each do |hoge| %>
+              <%= check_box_tag %>
+              <p> <%= hoge.customer_name %> </p>
+            <% end %>
+
+        </div>
       </div>
-    </div>
+    
 
   </div>
 </body>
