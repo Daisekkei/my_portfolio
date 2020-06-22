@@ -12,10 +12,13 @@
     
       <div class=customer_list>
         <div class = list_box>
-          <p class = customer_name>顧客名</p>
+          <p class = customer_name>顧客名 チェックボックス：ソート</p>
             <% @customers.each do |hoge| %>
-              <%= check_box_tag %>
-              <p> <%= hoge.customer_name %> </p>
+              <p>
+              <%= check_box_tag :sample %>
+              <%= label_tag  %>
+              <%= hoge.customer_name %> 
+              </p>
             <% end %>
 
         </div>
