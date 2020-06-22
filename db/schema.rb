@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_06_19_155958) do
     t.string "project_name"
     t.string "vendor_name"
     t.string "board_name"
+    t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 2020_06_19_155958) do
   end
 
   create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "title"
     t.text "report"
     t.binary "attachment"
     t.integer "project_id"
