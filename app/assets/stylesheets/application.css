@@ -93,7 +93,7 @@ footer {
 
 .btn_new {
   height: 40px;
-  width:120px;
+  width:140px;
   background-color:teal;
   color: whitesmoke;
   cursor: hand;
@@ -148,3 +148,20 @@ footer {
   width: 100%;
   padding: 20px;
 }
+
+
+
+.fa-search {
+  color:gray;
+  font-size: 20px;
+}
+
+.input-group-sm {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.chart_box {
+  display: flex;
+}
+
