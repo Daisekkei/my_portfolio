@@ -15,7 +15,7 @@
  */
 
 header {
-  background-color: teal;
+  background-color: #427559;
   height: 20px;
   width: 100%;
   color: white ;
@@ -36,10 +36,10 @@ header {
 }
 
 footer {
-  background-color: #4DADA1;
+  background-color: #427559;
   height:40px;
   width: 100%;
-  font-size: 10px;
+  font-size: 20px;
   color: white;
   text-align: center;
   padding: 10px;
@@ -72,52 +72,46 @@ footer {
 .sales_person {
   height: 150px;
   width: 100%;
-  background-color: #83BAD6;
+  background-color: #49a15c;
   padding: 20px;
   
 }
 
 .sales_name {
   font-size: 30px;
-  color: azure;
+  color: #eafeee;
 }
 
 .customer_list {
   height: 100%;
-  background-color: teal;
+  background-color: #45c245;
   width: 100%;
   padding: 20px;
-  color: azure;
+  color:#eafeee;
+  font-size: 20px;
 
 }
 
 .btn_new {
   height: 40px;
   width:140px;
-  background-color:teal;
+  background-color:#49a15c;
   color: whitesmoke;
   cursor: hand;
   font-size: 20px;
-
   border-radius: 5px;
-  box-shadow: 0 10px 0 #007070;
   position: absolute;
-  top: calc(50% - 30px);
-  right: 20px;
-
+  top: calc(50% - 25px);
+  right: 30px;
 }
 
-.btn_new:active {
-  box-shadow: 0 5px 0 #007070;
-  margin-top: 5px;
-}
 
 .sales_forcast {
   height: 150px;
   width: 100%;
   background-color:#E5E5E5;
   font-size: 70px;
-  color: green;
+  color: #427559;
   display: flex;
   vertical-align: middle;
   position: relative;
@@ -130,7 +124,7 @@ footer {
 }
 
 .sales-total {
-  color: green;
+  color: #427559;
   font-size: 20px;
   font-weight: bold; 
   margin: 40px;
@@ -149,19 +143,64 @@ footer {
   padding: 20px;
 }
 
-
+.header__right--btn{
+  font-size: 20px;
+  top: 50px;
+  margin: 60px 20px 0px 20px;
+}
 
 .fa-search {
   color:gray;
-  font-size: 20px;
+  font-size: 25px;
+  margin: 2px 0 0 5px;
+  position: absolute; top:1px; left:1px; 
 }
 
 .input-group-sm {
-  height: 40px;
+  height: 30px;
+  width: 250px;
   vertical-align: middle;
+  display: flex;
+  vertical-align: middle;
+  position: relative;
+  margin: 100px 30px 0 0;
+}
+
+.input-group-append {
+  height: 30px;
+  width: 30px;
+  position: relative;
+
+}
+
+.btn-navbar{
+  height: 25px;
+  width: 25px;
+  position: absolute; top:1px; left:1px;
 }
 
 .chart_box {
   display: flex;
 }
 
+.body_login { 
+  background-image:  url("note_pic.jpg");
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
+  height: 1200px;
+}
+
+.login_box {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  margin: 200px auto;
+  background: rgba(22,22,22, 0.5);
+  width: 100%;
+  max-width: 960px;
+  border-radius: 5px;
+  padding-bottom: 32px;
+}
