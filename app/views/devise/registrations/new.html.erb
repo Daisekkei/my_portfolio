@@ -4,25 +4,52 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :苗字 %><br />
+    <%= f.text_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :名前 %><br />
+    <%= f.text_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :部署名 %><br />
+    <%= f.select :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワードを指定ください %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(最低、<%= @minimum_password_length %> 文字以上)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :再度、パスワードを入力してください %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+<div class="field">
+    <%= f.label :顔写真、キャラクタをアップロードしてください %><br />
+    <%= f.file_field :upload_file %>
+  </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "画像のアップロード" %>
+  </div>
+  
+</div>
+
+
+  <div class="actions">
+    <%= f.submit "登録" %>
   </div>
 <% end %>
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <%# 3秒後に、users/sigh_inのページに自動的に移る  %>
+  <meta http-equiv="refresh" content=" 3; url= users/sign_in">
+
+  <section class="effect-fade">
+  <h1> Sales Note</h1>
+  </section>
+
+  <style>
+    .effect-fade{
+    size : 20px;
+    color : black; 
+    /* フワッと表示させるための記述 */
+    opacity : 0.1;
+    transform : translate(0, 45px);
+    transition : all 300ms;
+
+    }
+
+    .effect-fade.effect-scroll {
+    opacity : 1;
+    transform : translate(0, 0);
+    }
+
+  </style>
+
+  <script>
+  $(function(){
+      $(window).scroll(function (){
+        $('.effect-fade').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight){
+                $(this).addClass('effect-scroll');
+            }
+        });
+      });
+    });
+  </script>
+
+</head>
