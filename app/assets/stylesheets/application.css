@@ -183,14 +183,14 @@ footer {
   display: flex;
 }
 
-.body_login { 
+#body_login { 
   background-image:  url("note_pic.jpg");
   background-position: center center;
   background-repeat:  no-repeat;
   background-attachment: fixed;
   background-size:  cover;
   background-color: #999;
-  height: 1600px;
+  height: 1400px;
   
 }
 
