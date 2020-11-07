@@ -5,7 +5,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   <body>
-    <div class=body_login>
+    <div id=body_login>
       <div class = window>
         <%= render partial:'main_view' %>
       </div>
@@ -15,6 +15,7 @@
           <br>
 
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
             <div class="field">
               <%= f.label :メールアドレス %><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -32,23 +33,24 @@
               </div>
             <% end %>
 
-              <div class="actions">
-                <%= f.submit "ログイン" %>
-              </div>
+            <div class="actions">
+              <%= f.submit "ログイン" %>
+            </div>
+            
+            <button>
+              <%= link_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, method: :post %>
+            </button>
 
-            <%= link_to 'ゲストログイン（閲覧用）', homes_guest_sign_in_path, method: :post %>
+              <%= render "devise/shared/links" %>
 
           <% end %>
+      </div>
 
-      <div>
+    </div>
 
     <footer>
     <small>&copy; 2020 Sales Note </small>
     </footer>
 
-
   </body>
 
-
-
-  <%= render "devise/shared/links" %>
