@@ -13,10 +13,10 @@ Rails.application.routes.draw do
   get 'posts/new', to: 'posts#new'
   post'posts', to: 'posts#create'
 
-  post 'homes/guest_sign_in', to: 'posts/index#new_guest'
+  post 'homes/guest_sign_in', to: 'posts#index'
 
   devise_scope :user do
-    post 'homes/guest_sign_in', to: 'posts/index#new_guest'
+    post 'homes/guest_sign_in', to: 'posts#index'
   end
 
 
