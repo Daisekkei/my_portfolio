@@ -10,6 +10,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
       ## Recoverable
       t.string   :reset_password_token
       t.string :department
+      t.string :name
       t.datetime :reset_password_sent_at
 
       ## Rememberable
