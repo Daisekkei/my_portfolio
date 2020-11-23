@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
+    flash[:notice] = '投稿が完了されました'
   end
 
   private

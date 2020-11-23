@@ -8,7 +8,7 @@ before_action :configure_permitted_parameters, if: :devise_controller?
 
   # サインイン後のリダイレクト先をマイページへ
   def after_sign_in_path_for(resource)
-    flash[:notice] = "ログインに成功しました" 
+    # flash[:notice] = "ログインに成功しました" 
     'http://localhost:3000/index' # サインイン後、このアドレスにダイレクトアクセス
   end
 
@@ -28,7 +28,7 @@ protected
 
 # サインアウト後のリダイレクト先をトップページへ
   def after_sign_out_path_for(resource)
-    flash[:alert] = "ログアウトしました"
+    # flash[:alert] = "ログアウトしました"
     root_path
   end
 

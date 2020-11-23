@@ -208,3 +208,16 @@ footer {
   border-radius: 5px;
   padding-bottom: 32px;
 }
+
+.notifications {
+  color: white;
+  text-align: center;  
+
+  .notice {
+    background-color: lightBlue;
+  }
+
+  .alert {
+    background-color: rgb(255, 81, 0);
+  }
+}
