@@ -1,0 +1,111 @@
+<body>
+  <div class = main>
+    <div class= sales_forcast>
+      <h1>
+        <%= image_tag 'rogo.png', class: 'logo'%>
+      </h1>
+      <h2 class = "wf-racing">Sales Note</h2>
+      
+      <div class = sales-total>
+        <p> <font size="6">2020年</font> 売上/利益</p> 
+        <p>US$13M/US$1.2M</p>
+        <div class="small-box bg-success">
+          <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class = sales-total>
+        <p> <font size="6">2021年</font> 売上/利益</p> 
+        <p>US$15M/US$1.4M</p>
+      </div>
+      
+      <div class = sales-total>
+        <p> <font size="6">2022年</font> 売上/利益</p> 
+        <p>US$19M/US$2.0M</p>
+      </div>
+      
+       <% if user_signed_in? %>
+          <%= link_to "新規投稿", new_post_path, class: "header__right--btn" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+        <% end %>
+
+
+      <div class="input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="検索" aria-label="Search">
+        <div class="input-group-append">
+          <i class="fas fa-search"></i>
+          <button class="btn btn-navbar" type="submit"></button>
+        </div>            
+      </div>
+
+
+      <button type="button" class="btn_new" onclick="location.href='/posts/new'"><i class="fas fa-edit"></i>新規作成</button>
+
+    </div>
+      
+
+    %= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+
+
+  <div class="field">
+    <%= f.label :名前 %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.email_field :email, autocomplete: "email" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :部署名 %><br />
+    <%= f.select :department, {'営業1部':1, '営業2部':2, '営業3部':3, 'マーケティング1部':4, 'マーケティング2部':5, '技術1部':6, '技術2部':7, '技術3部':8,} %>
+  </div>
+
+    <div class="field">
+    <%= f.label :肩書 %><br />
+    <%= f.select :position, {'担当':1, '主任':2, '課長':3, '部長':4, '技術師':5, '技術主任':6, '技術課長':7, '技術部長':8,} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワードを指定ください %>
+    <% if @minimum_password_length %>
+    <em>(最低、<%= @minimum_password_length %> 文字以上)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :再度、パスワードを入力してください %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :顔写真、キャラクタをアップロードしてください %><br />
+    <%= f.file_field :upload_file %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "画像のアップロード" %>
+  </div>
+  
+</div>
+
+  <div class="actions">
+    <%= f.submit "登録" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+  <div>
+</body>

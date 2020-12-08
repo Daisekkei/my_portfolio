@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_13_124632) do
+ActiveRecord::Schema.define(version: 2020_11_24_132654) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "customerID"
@@ -20,7 +20,9 @@ ActiveRecord::Schema.define(version: 2020_11_13_124632) do
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.text "content"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,19 +65,12 @@ ActiveRecord::Schema.define(version: 2020_11_13_124632) do
     t.string "reset_password_token"
     t.string "department"
     t.string "name"
-    t.string "position"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "image"
+    t.string "position"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "users_customer", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.integer "custommer_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

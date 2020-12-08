@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'posts', to: 'posts#index'
   get 'posts/new', to: 'posts#new'
   post'posts', to: 'posts#create'
+  get 'users/edit', to: 'users#edit'
 
   post 'homes/guest_sign_in', to: 'posts#index'
 
