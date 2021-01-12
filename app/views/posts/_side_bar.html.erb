@@ -3,9 +3,9 @@
 
     <div class=sales_person>
       <div class = sales_name>
-        <p><%= link_to current_user.name, users_edit_path(current_user) %>さん <i class="fas fa-cog"></i></p>
+        <%= current_user.name %> さん 
+        <button type="button" class="btn_user_edit" onclick="location.href='/users/edit'"><i class="fas fa-cog"></i>編集</button>
       </div>
-
       
     </div>
     

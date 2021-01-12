@@ -71,4 +71,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~>1.0'
 gem 'turbolinks', '~> 5'
+gem 'carrierwave'
+gem 'rmagick'
+
 
