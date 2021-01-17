@@ -2,9 +2,14 @@
   <div class=side>
 
     <div class=sales_person>
+      <% if current_user.image? %>
+        <%= image_tag current_user.image.url, :size => '50x50' %>
+      <% else %>
+        <%= image_tag "/assets/default.jpg", :size => '50x50' %>
+      <% end %>
       <div class = sales_name>
         <%= current_user.name %> さん 
-        <button type="button" class="btn_user_edit" onclick="location.href='/users/edit'"><i class="fas fa-cog"></i>編集</button>
+        <button type="button" class="btn_user_edit" onclick="location.href='/users/edit'"><i class="fas fa-cog"></i></button>
       </div>
       
     </div>
@@ -22,10 +27,5 @@
 
         </div>
       </div>
-    
-
   </div>
 </body>
-
-
-

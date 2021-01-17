@@ -32,6 +32,9 @@
     <%= f.file_field :image %>
     <br>
     <%= f.submit "画像のアップロード" %>
+    <%= f.label :画像の削除 %>
+    <%= f.check_box :remove_image %>
+      
   </div>
   
 
@@ -60,6 +63,7 @@
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
+
 <% end %>
 
 <h3>アカウントの取消し</h3>
