@@ -6,11 +6,13 @@ class PostsController < ApplicationController
   end
   
   def new
+    @customers = Customer.all
   end
 
   def create
     Post.create(post_params)
     flash[:notice] = '投稿が完了しました'
+    @customers = Customer.all
   end
 
   private

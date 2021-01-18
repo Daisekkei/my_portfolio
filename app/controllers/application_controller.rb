@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 before_action :configure_permitted_parameters, if: :devise_controller?
 # before_action :authenticate_user!
 
+
   # サインイン後のリダイレクト先をマイページへ
   def after_sign_in_path_for(resource)
     # flash[:notice] = "ログインに成功しました" 
@@ -19,8 +20,10 @@ protected
     # configure_permitted_parametersが実行されると、
     # devise_parameter_sanitizer.permitでnameのデータ操作を許可するアクションメソッドを指定
     # 今回の場合、ユーザ登録(sign_up)の際、ユーザ名(name)のデータ操作が許可されることになる。ストロングパラメーター。
+    # accout_updateメソッドを加えることにより、アカウントの更新の際に、データ変更が可能になる
     devise_parameter_sanitizer.permit(:sign_up, keys:[:name, :image, :department, :position, :email])
     devise_parameter_sanitizer.permit(:sign_in, keys:[:email])
+    devise_parameter_sanitizer.permit(:account_update, keys:[:name, :image, :department, :position, :email])
     
   end
 
