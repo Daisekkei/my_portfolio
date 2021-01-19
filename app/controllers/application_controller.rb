@@ -23,7 +23,7 @@ protected
     # accout_updateメソッドを加えることにより、アカウントの更新の際に、データ変更が可能になる
     devise_parameter_sanitizer.permit(:sign_up, keys:[:name, :image, :department, :position, :email])
     devise_parameter_sanitizer.permit(:sign_in, keys:[:email])
-    devise_parameter_sanitizer.permit(:account_update, keys:[:name, :image, :department, :position, :email])
+    devise_parameter_sanitizer.permit(:account_update, keys:[:name, :image, :department, :position, :email, :remove_image])
     
   end
 
