@@ -66,14 +66,14 @@ class ImageUploader < CarrierWave::Uploader::Base
 #     super.chomp(File.extname(super)) + '.jpg' 
 #   end
 
-# #日付で保存
-#   def filename
-#     if original_filename.present?
-#       time = Time.now
-#       name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
-#       name.downcase
-#     end
-#   end
+# # # #日付で保存
+  def filename
+    if original_filename.present?
+      time = Time.now
+      name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
+      name.downcase
+    end
+  end
 
 # end
 
@@ -105,9 +105,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   # 保存するファイルの命名規則
-  def filename
-    "something.jpg" if original_filename
-  end
+  # def filename
+  #   "something.jpg" if original_filename
+  # end
 
   # protected
   # # 一意となるトークンを作成
