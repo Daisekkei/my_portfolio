@@ -1,0 +1,190 @@
+<body>
+  <div class="chart_box">
+    <div style="width:600px; height:300px;">
+      <canvas id="sales_chart">
+        Canvas not supported...
+      </canvas>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <script>
+        (function() {
+          'use strict';
+          var type = 'doughnut';
+
+          var data = {
+            labels: ['hoge', 'hoga', 'huga', 2023],
+            datasets: [{
+              label: '期初計画',
+              data: [4, 4, 3, 2]
+            }, {
+              label: '最新情報',
+              data: [2, 3, 4, 6]
+            }]
+          };
+
+          var options = {
+              title: {
+          display: true,
+          text: '2020 Sales',
+          fontSize: 30,
+          position: 'left'
+              }
+          };
+
+          var options = {
+              tooltips: {
+          enabled: true,
+          mode: 'index',
+          intersect: false,
+          position: 'nearest',
+          backgroundColor: 'rgb(0,128,0)',
+          titleFontSize: 16,
+          titleFontStyle: 'oblique',
+          titleFontColor: 'yellow',
+          titleSpacing: 10,
+          titleMarginBottom: 15,
+          bodyFontSize: 14,
+              }
+          };
+          var ctx = document.getElementById('sales_chart').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: type,
+            data: data,
+            options: options
+          });
+        })();
+      </script>
+    </div>
+
+
+    <div style="width:600px; height:300px;">
+      <canvas id="sales_chart3">
+        Canvas not supported...
+      </canvas>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <script>
+        (function() {
+          'use strict';
+          var type = 'bar';
+
+          var data = {
+            labels: [2020, 2021, 2022, 2023],
+            datasets: [{
+              label: '期初計画',
+              data: [13, 15, 19, 21]
+            }, {
+              label: '最新情報',
+              data: [13.5, 15.5, 18, 22]
+            }]
+          };
+
+          var options = {
+              title: {
+          display: true,
+          text: 'Annual Sales',
+          fontSize: 30,
+          position: 'left'
+              }
+          };
+
+          var options = {
+              tooltips: {
+          enabled: true,
+          mode: 'index',
+          intersect: false,
+          position: 'nearest',
+          backgroundColor: 'rgb(0,128,0)',
+          titleFontSize: 16,
+          titleFontStyle: 'oblique',
+          titleFontColor: 'yellow',
+          titleSpacing: 10,
+          titleMarginBottom: 15,
+          bodyFontSize: 14,
+              }
+          };
+          var ctx = document.getElementById('sales_chart3').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: type,
+            data: data,
+            options: options
+          });
+        })();
+      </script>
+    </div>
+
+
+
+
+       <div style="width:600px; height:300px;">
+      <canvas id="sales_chart2">
+        Canvas not supported...
+      </canvas>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <script>
+        (function() {
+          'use strict';
+          var type = 'line';
+
+          var data = {
+            labels: [2020, 2021, 2022, 2023],
+            datasets: [{
+              label: '期初計画',
+              data: [13, 15, 19, 21]
+            }, {
+              label: '最新情報',
+              data: [13.5, 15.5, 18, 22]
+            }]
+          };
+
+          var options = {
+              title: {
+          display: true,
+          text: 'Annual Sales',
+          fontSize: 30,
+          position: 'left'
+              }
+          };
+
+          var options = {
+              tooltips: {
+          enabled: true,
+          mode: 'index',
+          intersect: false,
+          position: 'nearest',
+          backgroundColor: 'rgb(0,128,0)',
+          titleFontSize: 16,
+          titleFontStyle: 'oblique',
+          titleFontColor: 'yellow',
+          titleSpacing: 10,
+          titleMarginBottom: 15,
+          bodyFontSize: 14,
+              }
+          };
+          var ctx = document.getElementById('sales_chart2').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: type,
+            data: data,
+            options: options
+          });
+        })();
+      </script>
+    </div>
+    </div>
+
+
+    <div class= project_list>
+      <% @posts.each do |post| %>
+        <div class="post">
+          <div class="post-date">
+            投稿日時：<%= post.created_at %>
+          </div>
+          <div class="post-content">
+            <%= post.content %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    
+  </div>
+  
+</body>
+
