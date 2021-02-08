@@ -25,8 +25,13 @@ class CustomersController < ApplicationController
     @customer.update(customer_params)
       redirect_to controller: 'posts', action: 'index' 
       flash[:notice] = '顧客名更新しました'
-    
-      
+     
+  end
+
+  def destroy
+    Customer.find(params[:id]).destroy
+      redirect_to controller: 'posts', action: 'index' 
+      flash[:notice] = '顧客削除しました'
   end
 
 
