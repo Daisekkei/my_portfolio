@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @customers = Customer.all
+    @projects = Project.all
   end
   
   def new

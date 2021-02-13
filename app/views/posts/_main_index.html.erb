@@ -1,4 +1,5 @@
 <body>
+
   <div class="chart_box">
     <div style="width:600px; height:300px;">
       <canvas id="sales_chart">
@@ -114,7 +115,7 @@
 
 
 
-       <div style="width:600px; height:300px;">
+    <div style="width:600px; height:300px;">
       <canvas id="sales_chart2">
         Canvas not supported...
       </canvas>
@@ -168,23 +169,13 @@
         })();
       </script>
     </div>
-    </div>
-
-
-    <div class= project_list>
-      <% @posts.each do |post| %>
-        <div class="post">
-          <div class="post-date">
-            投稿日時：<%= post.created_at %>
-          </div>
-          <div class="post-content">
-            <%= post.content %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-    
   </div>
-  
+
+  <div>
+    <% @projects.each do |hoge| %>
+      <%= hoge.project_name %> <br>
+    <% end %>
+
+  </div>
 </body>
 
