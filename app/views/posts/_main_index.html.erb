@@ -171,11 +171,22 @@
     </div>
   </div>
 
-  <div>
+  <div class=project_list >
+  <h2>プロジェクト名一覧</h2>
+  <p>
     <% @projects.each do |hoge| %>
-      <%= hoge.project_name %> <br>
+    <%= check_box_tag :sample %>
+      <%= link_to project_path(hoge) do %>
+        <%= hoge.project_name %> <br>
+      <% end %>
+      "作成日" <%=  l hoge.created_at %>
+      "更新日" <%=  l hoge.updated_at %> <br>
     <% end %>
-
+  </p>
   </div>
+
+  <div>
+  </div>
+
 </body>
 

@@ -20,6 +20,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def show
+    @customers = Customer.all
+    @project = Project.find(params[:id])
+  end
+
   def edit
     @projects = Project.all
     @project = Project.find(params[:id])
