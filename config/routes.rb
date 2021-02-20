@@ -8,12 +8,13 @@ Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
-  resources :customers do
-    resources :projects
-  end
+  resources :customers
+  resources :projects
+  
   
   resources :projects do
     resources :posts
+    resources :sales_conditions
   end
   
   # アプリケーションを立ち上げると、同時に/openingsのページにアクセスされる

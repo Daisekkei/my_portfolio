@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_13_232759) do
+ActiveRecord::Schema.define(version: 2021_02_20_074017) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "customer_name"
@@ -37,15 +37,15 @@ ActiveRecord::Schema.define(version: 2021_02_13_232759) do
   create_table "sales_conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "project_id"
     t.string "part_number"
-    t.date "Prot"
-    t.date "MP"
+    t.date "prot_date"
+    t.date "mp_date"
     t.decimal "sell_price", precision: 10
     t.decimal "buy_price", precision: 10
     t.integer "quantity_month"
-    t.string "MP_site"
-    t.timestamp "update"
+    t.string "mp_site"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "vendor"
   end
 
   create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

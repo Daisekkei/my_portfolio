@@ -4,7 +4,11 @@ class PostsController < ApplicationController
     @posts = Post.all
     @customers = Customer.all
     @projects = Project.all
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
+  
   
   def new
     @customers = Customer.all
