@@ -9,9 +9,8 @@ class CreateSalesConditions < ActiveRecord::Migration[5.2]
       t.decimal :buy_price
       t.integer :quantity_month
       t.string :MP_site
-      t.timestamp :update
-
-      t.timestamps
+      remove_column :update :timestamp
+      
     end
   end
 end

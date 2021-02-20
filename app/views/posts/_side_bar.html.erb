@@ -21,9 +21,12 @@
               <p>
               <%= check_box_tag :sample %>
               <%= label_tag  %>
-              <%= hoge.customer_name %> 
+              <%= link_to edit_customer_path(hoge) do %>
+                <%= hoge.customer_name %> 
+              <% end %>
               </p>
             <% end %>
+            <%= link_to "＋ 新規顧客", new_customer_path, class: "header__right--btn" %>
 
         </div>
       </div>

@@ -104,6 +104,15 @@ footer {
 
 }
 
+.project_list {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  color:#3f3f3f;
+  font-size: 20px;
+
+}
+
 .btn_new {
   height: 40px;
   width:140px;
@@ -116,6 +125,28 @@ footer {
   top: calc(50% - 25px);
   right: 30px;
 }
+
+.btn_delete {
+  height: 40px;
+  width:140px;
+  background-color:#31a531;
+  color: whitesmoke;
+  cursor: hand;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
+  top: calc(50% - 25px);
+  right: 30px;
+}
+.btn_delete:hover {
+	opacity:0.6;
+	}
+.btn_delete:active {
+  -webkit-transform: translate(0,2px);
+  -moz-transform: translate(0,2px);
+  transform: translate(0,2px);
+  border-bottom:none;
+  }
 
 
 .sales_forcast {
