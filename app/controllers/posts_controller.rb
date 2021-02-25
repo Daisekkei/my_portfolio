@@ -1,15 +1,15 @@
 class PostsController < ApplicationController
 
+
+
   def index
     @posts = Post.all
     @customers = Customer.all
     @projects = Project.all
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    move_to_signed_in
   end
   
-  
+
   def new
     @customers = Customer.all
   end
@@ -24,5 +24,5 @@ class PostsController < ApplicationController
   def post_params
     params.permit(:content)
   end
-  
+
 end

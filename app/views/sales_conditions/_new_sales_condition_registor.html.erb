@@ -3,9 +3,25 @@
 
   <h1>新規詳細登録</h1>
 
-  <%= form_with model: [@project, @sales_condition] do |form| %>
-     <%= form.label :メーカー名 %><br> 
-     <%= form.text_field :vendor %> 
+  <%= form_with(model:[@project, @sales_condition]) do |form| %>
+     <%= form.label :vendor, "メーカー名" %><br> 
+     <%= form.text_field :vendor %> <br>
+     <%= form.label :part_number, "型番" %><br> 
+     <%= form.text_field :part_number %>  <br> 
+     <%= form.label :mp_date, "量産時期" %> <br> 
+     <%= form.date_select :mp_date %> <br> 
+     <%= form.label :prot_date, "試作時期" %> <br> 
+     <%= form.date_select :prot_date %> <br> 
+     <%= form.label :sell_price, "仕入単価" %> <br> 
+     <%= form.text_field :sell_price, data: { autonumeric: { aSign: '$ ', mDec: 0 } }%> <br> 
+     <%= form.label :buy_price, "販売単価" %> <br> 
+     <%= form.text_field :buy_price, data: { autonumeric: { aSign: '$ ', mDec: 0 } }%> <br> 
+     <%= form.label :quantity_month, "月産数量" %> <br> 
+     <%= form.text_field :quantity_month %> <br> 
+     <%= form.label :mp_site, "量産場所" %> <br> 
+     <%= form.text_field :mp_site %> <br>
+     
+
      <%= form.submit "保存", class: "btn_delete" %> 
   <% end %>  
 

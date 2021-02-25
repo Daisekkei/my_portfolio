@@ -22,7 +22,9 @@ class ProjectsController < ApplicationController
 
   def show
     @customers = Customer.all
+    @sales_conditions = SalesCondition.where project_id: params[:id]
     @project = Project.find(params[:id])
+    move_to_signed_in
   end
 
   def edit
@@ -34,7 +36,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @project.update(project_params)
       redirect_to controller: 'posts', action: 'index' 
-      flash[:notice] = '顧客名更新しました'
+      flash[:notice] = 'プロジェクト更新しました'
      
   end
 

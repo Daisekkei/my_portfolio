@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
    
-  validates :project_name, presence: true, uniqueness: true
-  has_many :sales_conditions
+  validates :project_name, presence: true
+  has_many :sales_condition
 
 end

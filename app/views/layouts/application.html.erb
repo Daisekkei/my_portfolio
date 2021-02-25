@@ -17,15 +17,11 @@
   <header></header>
   
   <body class = body>
-    
-    <div class="notifications">
-      <%flash.each do |key,value|%>
-        <%=content_tag(:div, value, class:key) %>
-      <%end%>
-    </div>
-
-
-    <%# <%= render 'shared/header' %> 
+    <div class= notifications>
+      <%= flash.each do |key,value| %>
+        <%= content_tag(:div, value, class:key) %> 
+      <% end %>
+    </div > 
     <%= yield %>
   </body>
 
