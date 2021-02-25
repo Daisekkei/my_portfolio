@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
 # Deviseで追加したカラムを利用する機能（ユーザ登録、ログイン認証など）の場合、configure_permitted_parametersの実行が必要
 before_action :configure_permitted_parameters, if: :devise_controller?
+#  before_action :move_to_signed_in, exept: [:/ ]
 # before_action :authenticate_user!
 
 
@@ -33,10 +34,19 @@ protected
 
 # サインアウト後のリダイレクト先をトップページへ
   def after_sign_out_path_for(resource)
-    # flash[:alert] = "ログアウトしました"
+    flash[:alert] = "ログアウトしました"
     root_path
   end
 
+
+  def move_to_signed_in
+    unless user_signed_in?
+      #サインインしていないユーザーはログインページが表示される
+      redirect_to  root_path
+    end
+  end
+
+  
 
 end
 
