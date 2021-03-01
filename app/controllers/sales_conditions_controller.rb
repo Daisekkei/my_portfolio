@@ -7,7 +7,7 @@ class SalesConditionsController < ApplicationController
   def new
     @customers = Customer.all
     @project = Project.find(params[:project_id])
-    @sales_condition = SalesCondition.new
+    @sales_condition = SalesCondition.new(sales_condition_params)
     move_to_signed_in
   end
 
@@ -29,7 +29,10 @@ class SalesConditionsController < ApplicationController
 
   def show
     @customers = Customer.all
-    @sales_condition = Sales_condition.find(params[:id])
+    @project = Project.find(params[:id])
+    params[:sales_condition_id]
+    @sales_condition.project_id = params[:project_id]
+    @sales_condition = SalesCondition.find(params[:id])
   end
 
   def edit
@@ -46,9 +49,12 @@ class SalesConditionsController < ApplicationController
   end
 
   def destroy
-    Project.find(params[:id]).destroy
-      redirect_to controller: 'posts', action: 'index'
-      flash[:notice] = '顧客削除しました'
+    @sales_condition = Sales_condition.find(params[:id])
+    @project = Project.find(params[:id])
+    @sales_condition.project_id = params[:project_id]
+    SalesCondition.find(params[:id]).destroy
+      redirect_to controller: 'projects', action: 'show'
+      flash[:notice] = '詳細プロジェクトを削除しました'
   end
 
 
