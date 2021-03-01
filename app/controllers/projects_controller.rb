@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
     @customers = Customer.all
     @sales_conditions = SalesCondition.where project_id: params[:id]
     @project = Project.find(params[:id])
+    @sales_condition = SalesCondition.find(params[:id])
     move_to_signed_in
   end
 
