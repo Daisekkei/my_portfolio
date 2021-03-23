@@ -1,5 +1,5 @@
 class SalesCondition < ApplicationRecord
-  belongs_to :project 
+  belongs_to :project
   validate :mp_date_cannot_be_in_prot_date
 
   def mp_date_cannot_be_in_prot_date

@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+
+  
   def index
     @projects = Project.all
   end
@@ -20,12 +22,13 @@ class ProjectsController < ApplicationController
     end
   end
 
+  
   def show
+    
     @customers = Customer.all
-    @sales_conditions = SalesCondition.where project_id: params[:id]
     @project = Project.find(params[:id])
+    @sales_conditions = @project.sales_conditions
     @sales_condition = SalesCondition.find(params[:id])
-    move_to_signed_in
   end
 
   def edit
@@ -51,7 +54,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:project_name, :board_name, :customer_id)
+    params.require(:project).permit(:id, :project_name, :board_name, :customer_id)
   end
 
 
