@@ -13,7 +13,7 @@
     <%= form.submit "保存", class: "btn_delete" %>
   <% end %> 
 
-    <%= link_to new_project_sales_condition_path(@project.id) do %>
+    <%= link_to new_project_sales_condition_path(@project) do %>
         <button type="button" class = "btn_delete" ><i class="fas fa-eraser"></i> 詳細作成</button>
     <% end %>
 
@@ -49,8 +49,8 @@
             <td><%= good.buy_price %></td>
             <td><%= good.quantity_month %></td>
             <td><%= good.mp_site %></td>
-            <td><%= link_to "編集",project_sales_condition_path([:edit, @project, @sales_condition]) %></td>
-            <td><%= link_to "削除",project_sales_condition_path([:delete, @project, @sales_condition]) %></td>  
+            <td><%= link_to '編集', edit_project_sales_condition_path(@project, good.id) %></td>
+            <td><%= link_to "削除", project_sales_condition_path(@project, good.id), method: :delete, data: { confirm: '本当に削除してよろしいでしょうか？' } %></td>   
           </tr>
         <% end %>
     </table>
